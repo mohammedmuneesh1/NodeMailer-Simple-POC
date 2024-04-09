@@ -7,8 +7,6 @@ export  function joiValidation(schema:Schema){
             req.body=data;
             next();
         } catch (error) {
-            console.log(error)
-            next(error);
             return res.status(400).json({ status: "Failure", message:error});
         }
     }
