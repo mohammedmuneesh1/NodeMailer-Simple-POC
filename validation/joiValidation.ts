@@ -7,8 +7,8 @@ export const gmailValidate=Joi.object({
     subject:Joi.string().min(4).max(200).messages({
         'string.base':'Subject must be a string',
         'string.empty':'Subject cannot be empty',
-        'string.min':'Subject must have at least 2 characters',
-        'string.max':'Subject cannot exceed 1500 characters',
+        'string.min':'Subject must have at least 4 characters',
+        'string.max': 'Subject cannot exceed 200 characters',
         'any.required':'subject is required'
     }).required(),
     text:Joi.string().min(4).max(15000).required(),
