@@ -5,7 +5,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express, { Express } from "express";
-const app: Express = express();
+export const app: Express = express();
 import { router } from "./routes/userRouter";
 
 app.use(express.json());
